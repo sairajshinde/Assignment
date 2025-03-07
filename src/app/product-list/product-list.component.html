@@ -1,0 +1,14 @@
+<div class="product-grid">
+    <mat-card *ngFor="let product of filteredProducts" class="product-card">
+      <img mat-card-image class="product-image" [src]="product.image" alt="Product image" />
+      <mat-card-content>
+        <h3 [matTooltip]="product.title" class="product-title">{{ product.title }}</h3>
+        <p class="product-description">{{ product.description }}</p>
+      </mat-card-content>
+      <mat-card-footer class="product-footer">
+        <span class="text-success">${{ product.price }}</span>
+        <span>Rating: {{ product.rating.rate }}★</span>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+  
